@@ -15,7 +15,7 @@ const Sequence: React.FC = () => {
 ///export default function App() {
 
   //VARIAVEIS
-  const [sound, setSound] = React.useState();
+  const [sound, setSound] = React.useState<Audio.Sound>();
   const [values,setVaues]= useState( {array: [0,1, 2,3,4,5,6,7,8]})
   const [atual,setAtual] = useState()
   const [pedal, setPedal] = useState<Number>(400)
@@ -31,7 +31,6 @@ const Sequence: React.FC = () => {
   const [stylebt9,setStylebt9] = useState(styles)
   const [stylebt10,setStylebt10] = useState(styles)
   const [stylebt11,setStylebt11] = useState(styles)
-
 
 
   //ACAO BUTTON
@@ -51,16 +50,20 @@ const Sequence: React.FC = () => {
  
   //PLAY AUDIO
   async function playSound0() {   
-    try{         
-     const {sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'));        
+    try{    
+           
+     const {sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'));
+     setSound(sound);        
      await sound.playAsync(); 
-     setTimeout(() => { sound.unloadAsync();},  + pedal);    
+    //  setTimeout(() => { sound.unloadAsync();},  + pedal);    
     }catch(err){console.log(err)}
  }  
  async function playSound1() { 
    try{
-     const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/piano_CSharp.mp3'))       
+     const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/piano_CSharp.mp3')) 
+          
      await sound.playAsync();
+      setSound(sound);    
      setTimeout(() => { sound.unloadAsync();},  +pedal);
      
    }
@@ -147,6 +150,13 @@ async function playSound11() {
   }   
   catch(err){}   
 }
+
+React.useEffect(() => {
+  return sound
+    ? () => {       
+        sound.unloadAsync(); }
+    : undefined;
+}, [sound]);
       
   //EVENTOS
   useEffect(() => { setStylebt0(styles); return()=> {clearTimeout()}  }, [stylebt0])
@@ -188,42 +198,42 @@ async function playSound11() {
     <Nabbar />
        <StatusBar style="auto" />
        
-       <Text style={styles.Text}>Banco1</Text>
+       <Text style={styles.Text}>Trilha1</Text>
         <View style={styles.line} >         
           <MyView style={stylebt0.content} onStartShouldSetResponder={bt0} texto='A' /> 
           <MyView style={stylebt0.content} onStartShouldSetResponder={bt0} texto='B' />                    
           <MyView style={stylebt1.content} onStartShouldSetResponder={bt1} texto='c'/>
           <MyView style={stylebt2.content} onStartShouldSetResponder={bt2} texto='D'/>  
          </View>
-        <Text style={styles.Text}>Banco2</Text>
+        <Text style={styles.Text}>Trilha2</Text>
         <View style={styles.line} >          
           <MyView style={stylebt3.content} onStartShouldSetResponder={bt3} texto='F'/>
           <MyView style={stylebt0.content} onStartShouldSetResponder={bt0} texto='G' />  
           <MyView style={stylebt4.content} onStartShouldSetResponder={bt4} texto='H'/>
           <MyView style={stylebt5.content} onStartShouldSetResponder={bt5} texto='I'/>
         </View>
-        <Text style={styles.Text}>Banco3</Text>
+        <Text style={styles.Text}>Trilha3</Text>
         <View style={styles.line} >          
           <MyView style={stylebt6.content} onStartShouldSetResponder={bt6} texto='J'/> 
           <MyView style={stylebt0.content} onStartShouldSetResponder={bt0} texto='K' />  
           <MyView style={stylebt7.content} onStartShouldSetResponder={bt7} texto='L'/>
           <MyView style={stylebt8.content} onStartShouldSetResponder={bt8} texto='M'/>
         </View>      
-        <Text style={styles.Text}>Banco4</Text>
+        <Text style={styles.Text}>Trilha4</Text>
         <View style={styles.line} >       
           <MyView style={stylebt9.content} onStartShouldSetResponder={bt9} texto='N'/> 
           <MyView style={stylebt0.content} onStartShouldSetResponder={bt0} texto='O' />   
           <MyView style={stylebt10.content} onStartShouldSetResponder={bt10} texto='P'/>
           <MyView style={stylebt11.content} onStartShouldSetResponder={bt11} texto='Q'/>
         </View>   
-        <Text style={styles.Text}>Banco5</Text>
+        <Text style={styles.Text}>Trilha5</Text>
         <View style={styles.line} >       
           <MyView style={stylebt9.content} onStartShouldSetResponder={bt9} texto='R'/> 
           <MyView style={stylebt0.content} onStartShouldSetResponder={bt0} texto='S' />   
           <MyView style={stylebt10.content} onStartShouldSetResponder={bt10} texto='T'/>
           <MyView style={stylebt11.content} onStartShouldSetResponder={bt11} texto='U'/>
         </View>  
-        <Text style={styles.Text}>Banco6</Text>
+        <Text style={styles.Text}>Trilha6</Text>
         <View style={styles.line} >       
           <MyView style={stylebt9.content} onStartShouldSetResponder={bt9} texto='V'/> 
           <MyView style={stylebt0.content} onStartShouldSetResponder={bt0} texto='X' />   

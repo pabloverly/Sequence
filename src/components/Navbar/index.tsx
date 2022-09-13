@@ -21,33 +21,35 @@ export default function Navbar() {
  }  
   return (
     <View style={styles.containerNav} >
-
+      
       <View style={styles.lineNav} >
         <View style={styles.contentNav}>      
-          <RectButton onPress={() => {navigate('Piano'); playSound() }} style={styles.ButtonCircleNav}>
-          <Text style={styles.okButtonTextNav}>Voltar</Text>
+          <RectButton onPress={() => {navigate('Sequence'); playSound() }} style={styles.ButtonCircleNav}>
+          <Text style={styles.Text}>B1</Text>
           </RectButton>
         </View>
 
         <View style={styles.contentNav}>
           <RectButton onPress={() => {navigate('Drum'); playSound()}} style={styles.ButtonCircleNav}>   
-          <Text style={styles.okButtonTextNav}>valor</Text>     
+          <Text style={styles.Text}>B2</Text> 
           </RectButton>
         </View>
 
-        <View style={styles.contentNav}>
+        <View style={styles.ButtonDisable}>
           <RectButton onPress={() => {navigate('Percusao'); playSound() }} style={styles.ButtonCircleNav}>  
-          <Text style={styles.okButtonTextNav}>Voltar</Text>     
+          <Text style={styles.Text}>B3</Text>     
           </RectButton>     
         </View>
 
         <View style={styles.ButtonDisable} pointerEvents="none">
           <RectButton onPress={ novos} style={styles.ButtonCircleNav}>  
+          <Text style={styles.Text}>B4</Text> 
           </RectButton>     
         </View>
 
         <View style={styles.ButtonDisable} pointerEvents="none">
           <RectButton onPress={ novos} style={styles.ButtonCircleNav}>  
+          <Text style={styles.Text}>B5</Text> 
           </RectButton>     
         </View>
       </View>         

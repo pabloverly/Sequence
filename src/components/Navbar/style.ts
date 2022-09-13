@@ -10,6 +10,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row' ,
      
   },
+  Text:{
+    color: '#fff',
+    marginLeft:'30%',
+  },
   contentNav: {
     marginVertical: 10,
     backgroundColor: '#FF0000',
