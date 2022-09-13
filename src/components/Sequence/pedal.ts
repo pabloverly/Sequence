@@ -35,11 +35,15 @@ const styles = StyleSheet.create({
     width:'35%', 
     marginLeft: 35,   
   },
+  Text:{
+    color: '#fff'
+  },
 
   Button2:{
     marginVertical: 10,
-    backgroundColor: '#DAA520',
+    backgroundColor: '#FF0000',
     height: 58,
+    color: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 8,  

@@ -7,16 +7,17 @@ interface IButtonProps {
     children?: React.ReactNode;
     props?: any;
     onPress?: any;
-    value?: number 
-    testo?: String
-    style?: any
+    value?: number;
+    texto?: String;
+    style?: any;
+    textStyle?: any;
 }
-const MyButton: React.FC<IButtonProps> = ({style, onPress, testo,children, ...props }) => {
+const MyButton: React.FC<IButtonProps> = ({style, onPress, texto,textStyle,children, ...props }) => {
 //const MyButton: React.FC = () => {
 
     return (
         <RectButton  onPress={onPress} value={props.value}{...props} style={style}> 
-            <Text>{testo}</Text>
+            <Text style={textStyle}>{texto}</Text>
         </RectButton>
     );
 };

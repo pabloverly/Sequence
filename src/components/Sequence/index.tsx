@@ -11,14 +11,10 @@ import Sound from 'react-native-sound';
 import Nabbar from  '../Navbar'
 
 const Sequence: React.FC = () => {
-
-///export default function App() {
-
   //VARIAVEIS
   const [sound, setSound] = React.useState<Audio.Sound>();
-  const [values,setVaues]= useState( {array: [0,1, 2,3,4,5,6,7,8]})
   const [atual,setAtual] = useState()
-  const [pedal, setPedal] = useState<Number>(400)
+  const [pedal, setPedal] = useState<Number>(400000)
   const [stylebt0,setStylebt0] = useState(styles)
   const [stylebt1,setStylebt1] = useState(styles)
   const [stylebt2,setStylebt2] = useState(styles)
@@ -46,118 +42,131 @@ const Sequence: React.FC = () => {
   const bt9 = () =>{  playSound9(); setStylebt9(styleClique);  }
   const bt10 = () =>{  playSound10(); setStylebt10(styleClique);  }
   const bt11 = () =>{  playSound11(); setStylebt11(styleClique);  }
+  const btoff = () =>{  stopSound()  }
 
  
   //PLAY AUDIO
-  async function playSound0() {   
-    try{    
-           
-     const {sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'));
-     setSound(sound);        
-     await sound.playAsync(); 
-    //  setTimeout(() => { sound.unloadAsync();},  + pedal);    
-    }catch(err){console.log(err)}
- }  
- async function playSound1() { 
-   try{
-     const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/piano_CSharp.mp3')) 
+async function playSound0() {   
+  try{    
           
-     await sound.playAsync();
-      setSound(sound);    
-     setTimeout(() => { sound.unloadAsync();},  +pedal);
-     
-   }
-     catch(err){console.log(err)}
- }
- async function playSound2() { 
-   try{
-     const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/piano_D.mp3'));         
-     await sound.playAsync();
-     setTimeout(() => { sound.unloadAsync();},  + pedal);      
-   }
-     catch(err){console.log(err) 
-     }
- }
- async function playSound3() { 
-   try{
-     const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/piano_DSharp.mp3'));         
-     await sound.playAsync();
-     setTimeout(() => { sound.unloadAsync();},  + pedal);
-   }
-   catch(err){}
- }
- async function playSound4() { 
-   try{
-     const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/piano_E.mp3'));         
-     await sound.playAsync();
-     setTimeout(() => { sound.unloadAsync();},  + pedal);
-   }
-   catch(err){}
- }
- async function playSound5() { 
-   try{
-     const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/piano_F.mp3'));         
-     await sound.playAsync();
-     setTimeout(() => { sound.unloadAsync();},  + pedal);
-   }
-   catch(err){}
- }
- async function playSound6() { 
-   try{
-     const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/piano_FSharp.mp3'));         
-     await sound.playAsync();
-     setTimeout(() => { sound.unloadAsync();},  + pedal);
-   }
-   catch(err){}
- }
- async function playSound7() { 
-   try{
-     const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/piano_G.mp3'));         
-     await sound.playAsync();
-     setTimeout(() => { sound.unloadAsync();},  + pedal);      
-   }
-   catch(err){}
- }
- async function playSound8() { 
-   try{
-     const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/piano_GSharp.mp3'));         
-     await sound.playAsync();
-     setTimeout(() => { sound.unloadAsync();},  + pedal);
-   }   
-   catch(err){}   
- }
- async function playSound9() { 
+    const {sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'));
+    setSound(sound);        
+    await sound.playAsync(); 
+    setTimeout(() => { sound.unloadAsync();},  + pedal);    
+  }catch(err){console.log(err)}
+}  
+async function playSound1() { 
   try{
-    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/piano_A.mp3'));         
-    await sound.playAsync();
-    setTimeout(() => { sound.unloadAsync();},  + pedal);
-  }   
-  catch(err){}   
+    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+    setSound(sound);   
+    await sound.playAsync(); 
+    setTimeout(() => { sound.unloadAsync();},  +pedal);     
+  }
+    catch(err){console.log(err)}
+}
+async function playSound2() { 
+  try{
+    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+    setSound(sound);   
+    await sound.playAsync(); 
+    setTimeout(() => { sound.unloadAsync();},  +pedal);     
+  }
+    catch(err){console.log(err)}
+}
+async function playSound3() { 
+  try{
+    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+    setSound(sound);   
+    await sound.playAsync(); 
+    setTimeout(() => { sound.unloadAsync();},  +pedal);     
+  }
+    catch(err){console.log(err)}
+}
+async function playSound4() { 
+  try{
+    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+    setSound(sound);   
+    await sound.playAsync(); 
+    setTimeout(() => { sound.unloadAsync();},  +pedal);     
+  }
+    catch(err){console.log(err)}
+}
+async function playSound5() { 
+  try{
+    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+    setSound(sound);   
+    await sound.playAsync(); 
+    setTimeout(() => { sound.unloadAsync();},  +pedal);     
+  }
+    catch(err){console.log(err)}
+}
+async function playSound6() { 
+  try{
+    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+    setSound(sound);   
+    await sound.playAsync(); 
+    setTimeout(() => { sound.unloadAsync();},  +pedal);     
+  }
+    catch(err){console.log(err)}
+}
+async function playSound7() { 
+  try{
+    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+    setSound(sound);   
+    await sound.playAsync(); 
+    setTimeout(() => { sound.unloadAsync();},  +pedal);     
+  }
+    catch(err){console.log(err)}
+}
+async function playSound8() { 
+  try{
+    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+    setSound(sound);   
+    await sound.playAsync(); 
+    setTimeout(() => { sound.unloadAsync();},  +pedal);     
+  }
+    catch(err){console.log(err)}
+}
+async function playSound9() { 
+  try{
+    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+    setSound(sound);   
+    await sound.playAsync(); 
+    setTimeout(() => { sound.unloadAsync();},  +pedal);     
+  }
+    catch(err){console.log(err)}
 }
 async function playSound10() { 
   try{
-    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/piano_ASharp.mp3'));         
-    await sound.playAsync();
-    setTimeout(() => { sound.unloadAsync();},  + pedal);
-  }   
-  catch(err){}   
+    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+    setSound(sound);   
+    await sound.playAsync(); 
+    setTimeout(() => { sound.unloadAsync();},  +pedal);     
+  }
+    catch(err){console.log(err)}
 }
 async function playSound11() { 
   try{
-    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/piano_B.mp3'));         
-    await sound.playAsync();
-    setTimeout(() => { sound.unloadAsync();},  + pedal);
-  }   
-  catch(err){}   
+    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+    setSound(sound);   
+    await sound.playAsync(); 
+    setTimeout(() => { sound.unloadAsync();},  +pedal);     
+  }
+    catch(err){console.log(err)}
 }
 
-React.useEffect(() => {
-  return sound
-    ? () => {       
-        sound.unloadAsync(); }
-    : undefined;
-}, [sound]);
-      
+async function stopSound() { 
+  try{
+    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/vazio.mp3')) 
+         
+    await sound.playAsync();
+    setSound(sound);    
+    setTimeout(() => { sound.unloadAsync();},  +pedal);
+    
+  }
+    catch(err){console.log(err)}
+}
+
   //EVENTOS
   useEffect(() => { setStylebt0(styles); return()=> {clearTimeout()}  }, [stylebt0])
   useEffect(() => { setStylebt1(styles); return()=> {clearTimeout()}  }, [stylebt1])
@@ -177,21 +186,35 @@ React.useEffect(() => {
   React.useEffect(() => {
     return ()=> {clearTimeout();} 
   }, [stylebt0,stylebt1,stylebt2,stylebt3,stylebt4,stylebt5,stylebt6,stylebt7,stylebt8]);
-
-  async function fnPedalOn() {
-    setPedal(4000)
-    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/on.mp3'));         
-    await sound.playAsync();
-    setTimeout(() => { sound.unloadAsync();},  + pedal); 
+ 
+  React.useEffect(() => {
+    return sound
+      ? () => {     
+          sound.unloadAsync(); }
+      : undefined;
+  }, [sound]);
+  // async function fnPedalOn() {
+  //   setPedal(4000)
+  //   const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/on.mp3'));         
+  //   await sound.playAsync();
+  //   setTimeout(() => { sound.unloadAsync();},  + pedal); 
+  // }
+  // async function fnPedalOff() {
+  //   setPedal(400)
+  //   const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/off.mp3'));         
+  //   await sound.playAsync();
+  //   setTimeout(() => { sound.unloadAsync();},  + pedal); 
+  // }
+  async function stopAudio() {    
+    try{
+      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/piano_D.mp3'));         
+      await sound.playAsync();
+      setTimeout(() => { sound.unloadAsync();},  + pedal);      
+    }
+      catch(err){console.log(err) 
+      }
   }
-  async function fnPedalOff() {
-    setPedal(400)
-    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/off.mp3'));         
-    await sound.playAsync();
-    setTimeout(() => { sound.unloadAsync();},  + pedal); 
-  }
-
-
+ 
   
   return (
     <View style={styles.container} >  
@@ -201,9 +224,9 @@ React.useEffect(() => {
        <Text style={styles.Text}>Trilha1</Text>
         <View style={styles.line} >         
           <MyView style={stylebt0.content} onStartShouldSetResponder={bt0} texto='A' /> 
-          <MyView style={stylebt0.content} onStartShouldSetResponder={bt0} texto='B' />                    
-          <MyView style={stylebt1.content} onStartShouldSetResponder={bt1} texto='c'/>
-          <MyView style={stylebt2.content} onStartShouldSetResponder={bt2} texto='D'/>  
+          <MyView style={stylebt0.content} onStartShouldSetResponder={bt1} texto='B' />                    
+          <MyView style={stylebt1.content} onStartShouldSetResponder={bt2} texto='c'/>
+          <MyView style={stylebt2.content} onStartShouldSetResponder={bt3} texto='D'/>  
          </View>
         <Text style={styles.Text}>Trilha2</Text>
         <View style={styles.line} >          
@@ -241,8 +264,7 @@ React.useEffect(() => {
           <MyView style={stylebt11.content} onStartShouldSetResponder={bt11} texto='Z'/>
         </View>  
         <View style={stylePedal.line} >
-        <MyButton value={0} onPress={fnPedalOn} style={stylePedal.Button1} testo='On' ></MyButton>  
-        <MyButton value={0} onPress={fnPedalOff} style={stylePedal.Button2} testo='Off' ></MyButton>   
+          <MyButton value={0} onPress={btoff} style={stylePedal.Button2} texto='Stop'  textStyle={stylePedal.Text}/>
       </View>
 
     </View>
