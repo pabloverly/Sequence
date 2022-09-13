@@ -45,131 +45,131 @@ const Sequence: React.FC = () => {
   const btoff = () =>{  stopSound()  }
 
  
-  //PLAY AUDIO
-async function playSound0() {   
-  try{    
-          
-    const {sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'));
-    setSound(sound);        
-    await sound.playAsync(); 
-    setTimeout(() => { sound.unloadAsync();},  + pedal);    
-  }catch(err){console.log(err)}
-}  
-async function playSound1() { 
-  try{
-    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
-    setSound(sound);   
-    await sound.playAsync(); 
-    setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    //PLAY AUDIO
+  async function playSound0() {   
+    try{    
+            
+      const {sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'));
+      setSound(sound);        
+      await sound.playAsync(); 
+      // setTimeout(() => { sound.unloadAsync();},  + pedal);    
+    }catch(err){console.log(err)}
+  }  
+  async function playSound1() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria2.mp3'))   
+      setSound(sound);   
+      await sound.playAsync(); 
+      // setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
   }
-    catch(err){console.log(err)}
-}
-async function playSound2() { 
-  try{
-    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
-    setSound(sound);   
-    await sound.playAsync(); 
-    setTimeout(() => { sound.unloadAsync();},  +pedal);     
+  async function playSound2() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
   }
-    catch(err){console.log(err)}
-}
-async function playSound3() { 
-  try{
-    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
-    setSound(sound);   
-    await sound.playAsync(); 
-    setTimeout(() => { sound.unloadAsync();},  +pedal);     
+  async function playSound3() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
   }
-    catch(err){console.log(err)}
-}
-async function playSound4() { 
-  try{
-    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
-    setSound(sound);   
-    await sound.playAsync(); 
-    setTimeout(() => { sound.unloadAsync();},  +pedal);     
+  async function playSound4() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
   }
-    catch(err){console.log(err)}
-}
-async function playSound5() { 
-  try{
-    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
-    setSound(sound);   
-    await sound.playAsync(); 
-    setTimeout(() => { sound.unloadAsync();},  +pedal);     
+  async function playSound5() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
   }
-    catch(err){console.log(err)}
-}
-async function playSound6() { 
-  try{
-    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
-    setSound(sound);   
-    await sound.playAsync(); 
-    setTimeout(() => { sound.unloadAsync();},  +pedal);     
+  async function playSound6() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
   }
-    catch(err){console.log(err)}
-}
-async function playSound7() { 
-  try{
-    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
-    setSound(sound);   
-    await sound.playAsync(); 
-    setTimeout(() => { sound.unloadAsync();},  +pedal);     
+  async function playSound7() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
   }
-    catch(err){console.log(err)}
-}
-async function playSound8() { 
-  try{
-    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
-    setSound(sound);   
-    await sound.playAsync(); 
-    setTimeout(() => { sound.unloadAsync();},  +pedal);     
+  async function playSound8() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
   }
-    catch(err){console.log(err)}
-}
-async function playSound9() { 
-  try{
-    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
-    setSound(sound);   
-    await sound.playAsync(); 
-    setTimeout(() => { sound.unloadAsync();},  +pedal);     
+  async function playSound9() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
   }
-    catch(err){console.log(err)}
-}
-async function playSound10() { 
-  try{
-    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
-    setSound(sound);   
-    await sound.playAsync(); 
-    setTimeout(() => { sound.unloadAsync();},  +pedal);     
+  async function playSound10() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
   }
-    catch(err){console.log(err)}
-}
-async function playSound11() { 
-  try{
-    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
-    setSound(sound);   
-    await sound.playAsync(); 
-    setTimeout(() => { sound.unloadAsync();},  +pedal);     
+  async function playSound11() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
   }
-    catch(err){console.log(err)}
-}
 
-async function stopSound() { 
-  try{
-    const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/vazio.mp3')) 
-         
-    await sound.playAsync();
-    setSound(sound);    
-    setTimeout(() => { sound.unloadAsync();},  +pedal);
-    
+  async function stopSound() { 
+    try{     
+      
+      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/vazio.mp3'))           
+      await sound.playAsync();
+      setSound(sound);    
+      setTimeout(() => { sound.unloadAsync();},  +pedal);
+      
+    }
+      catch(err){console.log(err)}
   }
-    catch(err){console.log(err)}
-}
 
   //EVENTOS
-  useEffect(() => { setStylebt0(styles); return()=> {clearTimeout()}  }, [stylebt0])
-  useEffect(() => { setStylebt1(styles); return()=> {clearTimeout()}  }, [stylebt1])
+  useEffect(() => { setStylebt0(styles);  }, [stylebt0])
+  useEffect(() => { setStylebt1(styles);  }, [stylebt1])
   useEffect(() => { setStylebt2(styles); return()=> {clearTimeout()}  }, [stylebt2])
   useEffect(() => { setStylebt3(styles); return()=> {clearTimeout()}  }, [stylebt3])
   useEffect(() => { setStylebt4(styles); return()=> {clearTimeout()}  }, [stylebt4])
@@ -184,7 +184,7 @@ async function stopSound() {
 
 
   React.useEffect(() => {
-    return ()=> {clearTimeout();} 
+    // return ()=> {clearTimeout();} 
   }, [stylebt0,stylebt1,stylebt2,stylebt3,stylebt4,stylebt5,stylebt6,stylebt7,stylebt8]);
  
   React.useEffect(() => {
