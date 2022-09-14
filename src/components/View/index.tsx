@@ -9,13 +9,14 @@ interface IButtonProps {
     value?: number 
     style?: any
     texto?: string
+    styleText?: any
 }
-const MyButton: React.FC<IButtonProps> = ({style,texto, onStartShouldSetResponder, children, ...props }) => {
+const MyButton: React.FC<IButtonProps> = ({style,texto,styleText, onStartShouldSetResponder, children, ...props }) => {
 //const MyButton: React.FC = () => {
 
     return (
         <View  onStartShouldSetResponder={onStartShouldSetResponder} value={props.value}{...props} style={style}> 
-          <Text>{texto}</Text>
+          <Text style={styleText}>{texto}</Text>
         </View>
     );
 };

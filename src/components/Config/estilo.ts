@@ -10,6 +10,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row' ,   
      
   },
+  Image:{
+    width: 30,
+    height:30 
+  },
   content: {
     marginVertical: 10,    
     backgroundColor: '#0000CD', 

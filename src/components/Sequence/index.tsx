@@ -9,6 +9,7 @@ import MyView from '../View'
 import { Audio } from 'expo-av';
 import Sound from 'react-native-sound';
 import Nabbar from  '../Navbar'
+import Cabecalho from '../Cabecalho';
 
 const Sequence: React.FC = () => {
   //VARIAVEIS
@@ -48,8 +49,9 @@ const Sequence: React.FC = () => {
     //PLAY AUDIO
   async function playSound0() {   
     try{    
-            
-      const {sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'));
+      let url =  '../../assets/audio/Teoria.mp3';
+      
+      const { sound } = await Audio.Sound.createAsync(({uri:'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'}));  
       setSound(sound);        
       await sound.playAsync(); 
       // setTimeout(() => { sound.unloadAsync();},  + pedal);    
@@ -57,7 +59,7 @@ const Sequence: React.FC = () => {
   }  
   async function playSound1() { 
     try{
-      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria2.mp3'))   
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://10.0.76.172:3000/teste.mp3'}));  
       setSound(sound);   
       await sound.playAsync(); 
       // setTimeout(() => { sound.unloadAsync();},  +pedal);     
@@ -217,56 +219,59 @@ const Sequence: React.FC = () => {
  
   
   return (
-    <View style={styles.container} >  
-    <Nabbar />
+    <View style={styles.container} > 
+     {/* <Cabecalho />  */}
+     <Nabbar />
+    
        <StatusBar style="auto" />
        
        <Text style={styles.Text}>Trilha1</Text>
         <View style={styles.line} >         
-          <MyView style={stylebt0.content} onStartShouldSetResponder={bt0} texto='A' /> 
-          <MyView style={stylebt0.content} onStartShouldSetResponder={bt1} texto='B' />                    
-          <MyView style={stylebt1.content} onStartShouldSetResponder={bt2} texto='c'/>
-          <MyView style={stylebt2.content} onStartShouldSetResponder={bt3} texto='D'/>  
+          <MyView styleText={styles.Text} style={stylebt0.content} onStartShouldSetResponder={bt0} texto='A'/> 
+          <MyView styleText={styles.Text} style={stylebt0.content} onStartShouldSetResponder={bt1} texto='B'/>                    
+          <MyView styleText={styles.Text} style={stylebt1.content} onStartShouldSetResponder={bt2} texto='c'/>
+          <MyView styleText={styles.Text} style={stylebt2.content} onStartShouldSetResponder={bt3} texto='D'/>  
          </View>
         <Text style={styles.Text}>Trilha2</Text>
         <View style={styles.line} >          
-          <MyView style={stylebt3.content} onStartShouldSetResponder={bt3} texto='F'/>
-          <MyView style={stylebt0.content} onStartShouldSetResponder={bt0} texto='G' />  
-          <MyView style={stylebt4.content} onStartShouldSetResponder={bt4} texto='H'/>
-          <MyView style={stylebt5.content} onStartShouldSetResponder={bt5} texto='I'/>
+          <MyView styleText={styles.Text} style={stylebt3.content} onStartShouldSetResponder={bt3} texto='F'/>
+          <MyView styleText={styles.Text} style={stylebt0.content} onStartShouldSetResponder={bt0} texto='G'/>  
+          <MyView styleText={styles.Text} style={stylebt4.content} onStartShouldSetResponder={bt4} texto='H'/>
+          <MyView styleText={styles.Text} style={stylebt5.content} onStartShouldSetResponder={bt5} texto='I'/>
         </View>
         <Text style={styles.Text}>Trilha3</Text>
         <View style={styles.line} >          
-          <MyView style={stylebt6.content} onStartShouldSetResponder={bt6} texto='J'/> 
-          <MyView style={stylebt0.content} onStartShouldSetResponder={bt0} texto='K' />  
-          <MyView style={stylebt7.content} onStartShouldSetResponder={bt7} texto='L'/>
-          <MyView style={stylebt8.content} onStartShouldSetResponder={bt8} texto='M'/>
+          <MyView styleText={styles.Text} style={stylebt6.content} onStartShouldSetResponder={bt6} texto='J'/> 
+          <MyView styleText={styles.Text} style={stylebt0.content} onStartShouldSetResponder={bt0} texto='K'/>  
+          <MyView styleText={styles.Text} style={stylebt7.content} onStartShouldSetResponder={bt7} texto='L'/>
+          <MyView styleText={styles.Text} style={stylebt8.content} onStartShouldSetResponder={bt8} texto='M'/>
         </View>      
         <Text style={styles.Text}>Trilha4</Text>
         <View style={styles.line} >       
-          <MyView style={stylebt9.content} onStartShouldSetResponder={bt9} texto='N'/> 
-          <MyView style={stylebt0.content} onStartShouldSetResponder={bt0} texto='O' />   
-          <MyView style={stylebt10.content} onStartShouldSetResponder={bt10} texto='P'/>
-          <MyView style={stylebt11.content} onStartShouldSetResponder={bt11} texto='Q'/>
+          <MyView styleText={styles.Text} style={stylebt9.content} onStartShouldSetResponder={bt9} texto='N'/> 
+          <MyView styleText={styles.Text} style={stylebt0.content} onStartShouldSetResponder={bt0} texto='O'/>   
+          <MyView styleText={styles.Text} style={stylebt10.content} onStartShouldSetResponder={bt10} texto='P'/>
+          <MyView styleText={styles.Text} style={stylebt11.content} onStartShouldSetResponder={bt11} texto='Q'/>
         </View>   
         <Text style={styles.Text}>Trilha5</Text>
         <View style={styles.line} >       
-          <MyView style={stylebt9.content} onStartShouldSetResponder={bt9} texto='R'/> 
-          <MyView style={stylebt0.content} onStartShouldSetResponder={bt0} texto='S' />   
-          <MyView style={stylebt10.content} onStartShouldSetResponder={bt10} texto='T'/>
-          <MyView style={stylebt11.content} onStartShouldSetResponder={bt11} texto='U'/>
+          <MyView styleText={styles.Text} style={stylebt9.content} onStartShouldSetResponder={bt9} texto='R'/> 
+          <MyView styleText={styles.Text} style={stylebt0.content} onStartShouldSetResponder={bt0} texto='S'/>   
+          <MyView styleText={styles.Text} style={stylebt10.content} onStartShouldSetResponder={bt10} texto='T'/>
+          <MyView styleText={styles.Text} style={stylebt11.content} onStartShouldSetResponder={bt11} texto='U'/>
         </View>  
         <Text style={styles.Text}>Trilha6</Text>
         <View style={styles.line} >       
-          <MyView style={stylebt9.content} onStartShouldSetResponder={bt9} texto='V'/> 
-          <MyView style={stylebt0.content} onStartShouldSetResponder={bt0} texto='X' />   
-          <MyView style={stylebt10.content} onStartShouldSetResponder={bt10} texto='Y'/>
-          <MyView style={stylebt11.content} onStartShouldSetResponder={bt11} texto='Z'/>
+          <MyView styleText={styles.Text} style={stylebt9.content} onStartShouldSetResponder={bt9} texto='V'/> 
+          <MyView styleText={styles.Text} style={stylebt0.content} onStartShouldSetResponder={bt0} texto='X'/>   
+          <MyView styleText={styles.Text} style={stylebt10.content} onStartShouldSetResponder={bt10} texto='Y'/>
+          <MyView styleText={styles.Text} style={stylebt11.content} onStartShouldSetResponder={bt11} texto='Z'/>
         </View>  
         <View style={stylePedal.line} >
-          <MyButton value={0} onPress={btoff} style={stylePedal.Button2} texto='Stop'  textStyle={stylePedal.Text}/>
+          <MyButton value={0} onPress={btoff} style={stylePedal.Button2} texto='Stop'  textStyle={stylePedal.Text}/>  
+                 
       </View>
-
+     
     </View>
   );
 }
