@@ -59,7 +59,7 @@ const Sequence: React.FC = () => {
   }  
   async function playSound1() { 
     try{
-      const { sound } = await Audio.Sound.createAsync(({uri:'http://10.0.76.172:3000/teste.mp3'}));  
+      const { sound } = await Audio.Sound.createAsync(({uri:'https://onedrive.live.com/embed?cid=BA4546E86A3A36B1&resid=BA4546E86A3A36B1%21495&authkey=AC5dqZA9A4cv6ps'}));  
       setSound(sound);   
       await sound.playAsync(); 
       // setTimeout(() => { sound.unloadAsync();},  +pedal);     
