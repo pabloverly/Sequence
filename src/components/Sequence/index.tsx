@@ -51,7 +51,8 @@ const Sequence: React.FC = () => {
     try{    
       let url =  '../../assets/audio/Teoria.mp3';
       
-      const { sound } = await Audio.Sound.createAsync(({uri:'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'}));  
+      // const { sound } = await Audio.Sound.createAsync(({uri:'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'})); 
+      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/_a.mp3'))    
       setSound(sound);        
       await sound.playAsync(); 
       // setTimeout(() => { sound.unloadAsync();},  + pedal);    
