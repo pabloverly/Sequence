@@ -28,8 +28,19 @@ const Sequence: React.FC = () => {
   const [stylebt9,setStylebt9] = useState(styles)
   const [stylebt10,setStylebt10] = useState(styles)
   const [stylebt11,setStylebt11] = useState(styles)
-
-
+  const [stylebt12,setStylebt12] = useState(styles)
+  const [stylebt13,setStylebt13] = useState(styles)
+  const [stylebt14,setStylebt14] = useState(styles)
+  const [stylebt15,setStylebt15] = useState(styles)
+  const [stylebt16,setStylebt16] = useState(styles)
+  const [stylebt17,setStylebt17] = useState(styles)
+  const [stylebt18,setStylebt18] = useState(styles)
+  const [stylebt19,setStylebt19] = useState(styles)
+  const [stylebt20,setStylebt20] = useState(styles)
+  const [stylebt21,setStylebt21] = useState(styles)
+  const [stylebt22,setStylebt22] = useState(styles)
+  const [stylebt23,setStylebt23] = useState(styles)
+  const [stylebt24,setStylebt24] = useState(styles)
   //ACAO BUTTON
   const bt0 = () =>{  playSound0(); setStylebt0(styleClique); }
   const bt1 = () =>{  playSound1(); setStylebt1(styleClique);  }
@@ -43,6 +54,20 @@ const Sequence: React.FC = () => {
   const bt9 = () =>{  playSound9(); setStylebt9(styleClique);  }
   const bt10 = () =>{  playSound10(); setStylebt10(styleClique);  }
   const bt11 = () =>{  playSound11(); setStylebt11(styleClique);  }
+  const bt12 = () =>{  playSound12(); setStylebt11(styleClique);  }
+  const bt13 = () =>{  playSound13(); setStylebt11(styleClique);  }
+  const bt14 = () =>{  playSound14(); setStylebt11(styleClique);  }
+  const bt15 = () =>{  playSound15(); setStylebt11(styleClique);  }
+  const bt16 = () =>{  playSound16(); setStylebt11(styleClique);  }
+  const bt17 = () =>{  playSound17(); setStylebt11(styleClique);  }
+  const bt18 = () =>{  playSound18(); setStylebt11(styleClique);  }
+  const bt19 = () =>{  playSound19(); setStylebt11(styleClique);  }
+  const bt20 = () =>{  playSound20(); setStylebt11(styleClique);  }
+  const bt21 = () =>{  playSound21(); setStylebt11(styleClique);  }
+  const bt22 = () =>{  playSound22(); setStylebt11(styleClique);  }
+  const bt23 = () =>{  playSound23(); setStylebt11(styleClique);  }
+  const bt24 = () =>{  playSound24(); setStylebt11(styleClique);  }
+
   const btoff = () =>{  stopSound()  }
 
  
@@ -51,15 +76,18 @@ const Sequence: React.FC = () => {
     try{    
       let url =  '../../assets/audio/Teoria.mp3';
       
-      const { sound } = await Audio.Sound.createAsync(({uri:'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'}));  
+      // const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://simbiosecode.store:8083/a.mp3'}));  
       setSound(sound);        
       await sound.playAsync(); 
       // setTimeout(() => { sound.unloadAsync();},  + pedal);    
     }catch(err){console.log(err)}
   }  
   async function playSound1() { 
+
+
     try{
-      const { sound } = await Audio.Sound.createAsync(({uri:'http://10.0.76.172:3000/teste.mp3'}));  
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://simbiosecode.store:8083/b.mp3'}));  
       setSound(sound);   
       await sound.playAsync(); 
       // setTimeout(() => { sound.unloadAsync();},  +pedal);     
@@ -68,7 +96,7 @@ const Sequence: React.FC = () => {
   }
   async function playSound2() { 
     try{
-      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/c.mp3'}));    
       setSound(sound);   
       await sound.playAsync(); 
       setTimeout(() => { sound.unloadAsync();},  +pedal);     
@@ -77,7 +105,7 @@ const Sequence: React.FC = () => {
   }
   async function playSound3() { 
     try{
-      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/d.mp3'}));   
       setSound(sound);   
       await sound.playAsync(); 
       setTimeout(() => { sound.unloadAsync();},  +pedal);     
@@ -86,7 +114,7 @@ const Sequence: React.FC = () => {
   }
   async function playSound4() { 
     try{
-      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/e.mp3'}));    
       setSound(sound);   
       await sound.playAsync(); 
       setTimeout(() => { sound.unloadAsync();},  +pedal);     
@@ -95,7 +123,7 @@ const Sequence: React.FC = () => {
   }
   async function playSound5() { 
     try{
-      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/f.mp3'}));   
       setSound(sound);   
       await sound.playAsync(); 
       setTimeout(() => { sound.unloadAsync();},  +pedal);     
@@ -104,7 +132,7 @@ const Sequence: React.FC = () => {
   }
   async function playSound6() { 
     try{
-      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/f.mp3'})); 
       setSound(sound);   
       await sound.playAsync(); 
       setTimeout(() => { sound.unloadAsync();},  +pedal);     
@@ -113,7 +141,7 @@ const Sequence: React.FC = () => {
   }
   async function playSound7() { 
     try{
-      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/h.mp3'}));  
       setSound(sound);   
       await sound.playAsync(); 
       setTimeout(() => { sound.unloadAsync();},  +pedal);     
@@ -122,7 +150,7 @@ const Sequence: React.FC = () => {
   }
   async function playSound8() { 
     try{
-      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/i.mp3'}));  
       setSound(sound);   
       await sound.playAsync(); 
       setTimeout(() => { sound.unloadAsync();},  +pedal);     
@@ -131,7 +159,7 @@ const Sequence: React.FC = () => {
   }
   async function playSound9() { 
     try{
-      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/j.mp3'}));  
       setSound(sound);   
       await sound.playAsync(); 
       setTimeout(() => { sound.unloadAsync();},  +pedal);     
@@ -140,7 +168,7 @@ const Sequence: React.FC = () => {
   }
   async function playSound10() { 
     try{
-      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/h.mp3'}));  
       setSound(sound);   
       await sound.playAsync(); 
       setTimeout(() => { sound.unloadAsync();},  +pedal);     
@@ -149,7 +177,112 @@ const Sequence: React.FC = () => {
   }
   async function playSound11() { 
     try{
-      const { sound } = await Audio.Sound.createAsync(require('../../assets/audio/Teoria.mp3'))   
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/l.mp3'}));  
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
+  }
+  async function playSound12() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/m.mp3'}));  
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
+  }  async function playSound13() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/n.mp3'}));  
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
+  }  async function playSound14() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/o.mp3'}));  
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
+  }  async function playSound15() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/p.mp3'}));  
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
+  }  async function playSound16() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/q.mp3'}));  
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
+  }  async function playSound17() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/r.mp3'}));  
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
+  }  async function playSound18() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/s.mp3'}));  
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
+  }  async function playSound19() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/t.mp3'}));  
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
+  }  async function playSound20() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/u.mp3'}));  
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
+  }  async function playSound21() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/v.mp3'}));  
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
+  }  async function playSound22() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/x.mp3'}));  
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
+  }  async function playSound23() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/y.mp3'}));  
+      setSound(sound);   
+      await sound.playAsync(); 
+      setTimeout(() => { sound.unloadAsync();},  +pedal);     
+    }
+      catch(err){console.log(err)}
+  }  async function playSound24() { 
+    try{
+      const { sound } = await Audio.Sound.createAsync(({uri:'http://192.168.1.65:8081/z.mp3'}));  
       setSound(sound);   
       await sound.playAsync(); 
       setTimeout(() => { sound.unloadAsync();},  +pedal);     
