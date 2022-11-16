@@ -24,21 +24,21 @@ export default function Navbar() {
       
       <View style={styles.lineNav} >
         <View style={styles.contentNav}>      
-          <RectButton onPress={() => {navigate('Sequence'); playSound() }} style={styles.ButtonCircleNav}>
+          <RectButton onPress={() => {navigate('SequenceB1'); playSound() }} style={styles.ButtonCircleNav}>
           <Text style={styles.Text}>B1</Text>
           </RectButton>
         </View>
 
         <View style={styles.contentNav}>
-          <RectButton onPress={() => {navigate('Drum'); playSound()}} style={styles.ButtonCircleNav}>   
+          <RectButton onPress={() => {navigate('SequenceB2'); playSound()}} style={styles.ButtonCircleNav}>   
           <Text style={styles.Text}>B2</Text> 
           </RectButton>
         </View>
 
-        <View style={styles.ButtonDisable}>
-          <RectButton onPress={() => {navigate('Percusao'); playSound() }} style={styles.ButtonCircleNav}>  
-          <Text style={styles.Text}>B3</Text>     
-          </RectButton>     
+        <View style={styles.contentNav}>
+          <RectButton onPress={() => {navigate('SequenceB3'); playSound()}} style={styles.ButtonCircleNav}>   
+          <Text style={styles.Text}>B3</Text> 
+          </RectButton>
         </View>
 
         <View style={styles.ButtonDisable} pointerEvents="none">

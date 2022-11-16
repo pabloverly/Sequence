@@ -6,8 +6,9 @@ import Piano from '../Piano';
 import Drum from '../Card';
 import Config from '../Config';
 import Percusao from '../Percusao';
-import Sequence from '../Sequence';
-
+import SequenceB1 from '../SequenceB1';
+import SequenceB2 from '../SequenceB2';
+import SequenceB3 from '../SequenceB3';
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -15,9 +16,9 @@ function AppStack() {
   return (
     <NavigationContainer>
       <Navigator screenOptions={{ headerShown: false }}>
-        <Screen name="Sequence" component={Sequence} />
-        <Screen name="Config" component={Config} />
-        <Screen name="Drum" component={Drum} />
+        <Screen name="SequenceB1" component={SequenceB1} />
+        <Screen name="SequenceB2" component={SequenceB2} />
+        <Screen name="SequenceB3" component={SequenceB3} />
         <Screen name="Percusao" component={Percusao} />      
          
       </Navigator>
